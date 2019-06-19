@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>arrayMode</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+        <p id="demo"></p>
+        
+        <script type="text/javascript">
+            function arrayMode(array){
+                
+               var arrlength = array.length; 
+              
+              
+               array.map(String);
+               array.sort();
+               
+              for(x=0; x<arrlength; x++)
+               {
+                  for(i=1; i<arrlength; i++)
+                  {
+                      if(array[x] !== array[i])
+                      {
+                         array.splice(x,1);
+                      }
+                        
+                  }
+                 
+                }
+               
+              
+               return array ;        
+            }                          
+            var array = [1,3,3,3,1]; 
+            document.getElementById("demo").innerHTML=arrayMode(array);
+        </script>
+    </body>
+</html>
